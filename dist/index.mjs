@@ -914,7 +914,7 @@ var Footer = ({
         children: /* @__PURE__ */ jsx7(Divider2, { orientation: "horizontal" })
       }
     ),
-    /* @__PURE__ */ jsx7(Grid26, { xs: "auto", container: true, justifyContent: "flex-end", children: /* @__PURE__ */ jsx7(Actions, { onCloseCallback, onSubmit, labels: labels.actions }) })
+    /* @__PURE__ */ jsx7(Grid26, { xs: "auto", container: true, justifyContent: "flex-end", children: /* @__PURE__ */ jsx7(Actions, { onCloseCallback, onSubmit, labels: labels?.actions }) })
   ] });
 };
 
@@ -980,6 +980,7 @@ var Sections = (props) => {
     helpers,
     handlers,
     locale,
+    labels,
     hideActionButtons = false,
     hideDefaultRanges = false,
     hideOutsideMonthDays,
@@ -1197,6 +1198,7 @@ var Sections = (props) => {
                     startDate,
                     endDate,
                     locale,
+                    labels,
                     onCloseCallback,
                     onSubmit: handlers.handleClickSubmit,
                     RangeSeparatorIcons

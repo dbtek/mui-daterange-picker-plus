@@ -876,7 +876,7 @@ var Footer = ({
         children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(import_material7.Divider, { orientation: "horizontal" })
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(import_material7.Unstable_Grid2, { xs: "auto", container: true, justifyContent: "flex-end", children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(Actions, { onCloseCallback, onSubmit, labels: labels.actions }) })
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(import_material7.Unstable_Grid2, { xs: "auto", container: true, justifyContent: "flex-end", children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(Actions, { onCloseCallback, onSubmit, labels: labels?.actions }) })
   ] });
 };
 
@@ -942,6 +942,7 @@ var Sections = (props) => {
     helpers,
     handlers,
     locale,
+    labels,
     hideActionButtons = false,
     hideDefaultRanges = false,
     hideOutsideMonthDays,
@@ -1159,6 +1160,7 @@ var Sections = (props) => {
                     startDate,
                     endDate,
                     locale,
+                    labels,
                     onCloseCallback,
                     onSubmit: handlers.handleClickSubmit,
                     RangeSeparatorIcons
