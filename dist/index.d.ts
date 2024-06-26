@@ -42,6 +42,7 @@ type PickerModalProps = PickerProps & {
 };
 type PickerBaseProps = PickerProps;
 type Labels = {
+    predefinedRanges?: string;
     actions?: {
         apply?: string;
         cancel?: string;
