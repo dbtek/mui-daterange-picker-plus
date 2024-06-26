@@ -528,7 +528,6 @@ var Month = (props) => {
     hideOutsideMonthDays
   } = props;
   const weekStartsOn = locale?.options?.weekStartsOn || 0;
-  console.log(locale);
   const WEEK_DAYS = Array.from(
     { length: 7 },
     (_, index) => typeof locale !== "undefined" ? locale.localize?.day((index + weekStartsOn) % 7, {
@@ -650,7 +649,6 @@ var DuelCalender = ({
 }) => {
   const canNavigateBack = !(0, import_date_fns6.isSameMonth)(firstMonth, commonProps.minDate);
   const canNavigateForward = !(0, import_date_fns6.isSameMonth)(secondMonth, commonProps.maxDate);
-  console.log(locale);
   return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(
     import_material5.Unstable_Grid2,
     {
@@ -951,7 +949,6 @@ var Sections = (props) => {
     onCloseCallback,
     footerRequired
   } = props;
-  console.log(locale);
   const { startDate, endDate } = dateRange;
   const canNavigateCloser = (0, import_date_fns9.differenceInCalendarMonths)(secondMonth, firstMonth) >= 2;
   const commonProps = {
@@ -1404,12 +1401,10 @@ var import_jsx_runtime10 = require("react/jsx-runtime");
 var DateRangePicker = (props) => {
   const { customProps, ...dateRangePickerProps } = props;
   const onSubmit = customProps?.onSubmit;
-  console.log(dateRangePickerProps.locale);
   const { ...computedProps } = useDateRangePicker({
     ...dateRangePickerProps,
     onSubmit
   });
-  console.log(computedProps.locale);
   return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Sections, { ...dateRangePickerProps, ...computedProps, ...customProps });
 };
 
@@ -1423,7 +1418,6 @@ var PickerModal = ({
 }) => {
   const theme = (0, import_material10.useTheme)();
   const isMobileView = (0, import_material10.useMediaQuery)(theme.breakpoints.down("md"));
-  console.log(dateRangePickerProps.locale);
   if (isMobileView) {
     const { open, onClose } = modalProps;
     return /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_material10.Dialog, { open, onClose, children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
