@@ -1468,11 +1468,12 @@ var DateRangePicker = (props) => {
 };
 
 // src/PickerModal.tsx
-import { Dialog, useTheme as useTheme7, Popover, useMediaQuery } from "@mui/material";
+import { Dialog, useTheme as useTheme7, Popover, useMediaQuery, Popper } from "@mui/material";
 import { jsx as jsx11 } from "react/jsx-runtime";
 var PickerModal = ({
   modalProps,
   customProps,
+  disableCloseOnClickOutside,
   ...dateRangePickerProps
 }) => {
   const theme = useTheme7();
@@ -1480,6 +1481,16 @@ var PickerModal = ({
   if (isMobileView) {
     const { open, onClose } = modalProps;
     return /* @__PURE__ */ jsx11(Dialog, { open, onClose, children: /* @__PURE__ */ jsx11(
+      DateRangePicker,
+      {
+        ...dateRangePickerProps,
+        customProps,
+        footerRequired: true
+      }
+    ) });
+  }
+  if (disableCloseOnClickOutside) {
+    return /* @__PURE__ */ jsx11(Popper, { ...modalProps, children: /* @__PURE__ */ jsx11(
       DateRangePicker,
       {
         ...dateRangePickerProps,

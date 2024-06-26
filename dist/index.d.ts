@@ -28,6 +28,7 @@ type PickerProps = {
     onChange?: (dateRange: DateRange) => void;
     hideDefaultRanges?: boolean;
     hideOutsideMonthDays?: boolean;
+    disableCloseOnClickOutside?: boolean;
 };
 type ModalCustomProps = {
     onSubmit?: (dateRange: DateRange) => void;
@@ -52,7 +53,7 @@ type Labels = {
     };
 };
 
-declare const PickerModal: ({ modalProps, customProps, ...dateRangePickerProps }: PickerModalProps) => react_jsx_runtime.JSX.Element;
+declare const PickerModal: ({ modalProps, customProps, disableCloseOnClickOutside, ...dateRangePickerProps }: PickerModalProps) => react_jsx_runtime.JSX.Element;
 
 declare const PickerBase: (props: PickerBaseProps) => react_jsx_runtime.JSX.Element;
 
