@@ -1414,7 +1414,6 @@ var import_jsx_runtime11 = require("react/jsx-runtime");
 var PickerModal = ({
   modalProps,
   customProps,
-  disableCloseOnClickOutside,
   ...dateRangePickerProps
 }) => {
   const theme = (0, import_material10.useTheme)();
@@ -1422,16 +1421,6 @@ var PickerModal = ({
   if (isMobileView) {
     const { open, onClose } = modalProps;
     return /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_material10.Dialog, { open, onClose, children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
-      DateRangePicker,
-      {
-        ...dateRangePickerProps,
-        customProps,
-        footerRequired: true
-      }
-    ) });
-  }
-  if (disableCloseOnClickOutside) {
-    return /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_material10.Popper, { ...modalProps, children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
       DateRangePicker,
       {
         ...dateRangePickerProps,
