@@ -1045,7 +1045,7 @@ var Sections = (props) => {
                         sx: {
                           fontSize: "14px"
                         },
-                        children: "Quick Select"
+                        children: labels?.predefinedRanges || "Quick Select"
                       }
                     ),
                     /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_material9.FormControl, { children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(

@@ -1083,7 +1083,7 @@ var Sections = (props) => {
                         sx: {
                           fontSize: "14px"
                         },
-                        children: "Quick Select"
+                        children: labels?.predefinedRanges || "Quick Select"
                       }
                     ),
                     /* @__PURE__ */ jsx9(FormControl2, { children: /* @__PURE__ */ jsx9(
