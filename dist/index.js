@@ -650,6 +650,7 @@ var DuelCalender = ({
 }) => {
   const canNavigateBack = !(0, import_date_fns6.isSameMonth)(firstMonth, commonProps.minDate);
   const canNavigateForward = !(0, import_date_fns6.isSameMonth)(secondMonth, commonProps.maxDate);
+  console.log(locale);
   return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(
     import_material5.Unstable_Grid2,
     {
@@ -950,6 +951,7 @@ var Sections = (props) => {
     onCloseCallback,
     footerRequired
   } = props;
+  console.log(locale);
   const { startDate, endDate } = dateRange;
   const canNavigateCloser = (0, import_date_fns9.differenceInCalendarMonths)(secondMonth, firstMonth) >= 2;
   const commonProps = {
@@ -1117,7 +1119,8 @@ var Sections = (props) => {
               handleSetSingleMonth,
               canNavigateCloser,
               commonProps,
-              hideOutsideMonthDays
+              hideOutsideMonthDays,
+              locale
             }
           ) }),
           /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_material9.Unstable_Grid2, { flex: 1, display: { xs: "none", md: "flex" }, container: true, children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
@@ -1401,10 +1404,12 @@ var import_jsx_runtime10 = require("react/jsx-runtime");
 var DateRangePicker = (props) => {
   const { customProps, ...dateRangePickerProps } = props;
   const onSubmit = customProps?.onSubmit;
+  console.log(dateRangePickerProps.locale);
   const { ...computedProps } = useDateRangePicker({
     ...dateRangePickerProps,
     onSubmit
   });
+  console.log(computedProps.locale);
   return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Sections, { ...dateRangePickerProps, ...computedProps, ...customProps });
 };
 
@@ -1418,6 +1423,7 @@ var PickerModal = ({
 }) => {
   const theme = (0, import_material10.useTheme)();
   const isMobileView = (0, import_material10.useMediaQuery)(theme.breakpoints.down("md"));
+  console.log(dateRangePickerProps.locale);
   if (isMobileView) {
     const { open, onClose } = modalProps;
     return /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_material10.Dialog, { open, onClose, children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
