@@ -1129,7 +1129,8 @@ var Sections = (props) => {
               handleSetSecondMonth,
               canNavigateCloser,
               commonProps,
-              hideOutsideMonthDays
+              hideOutsideMonthDays,
+              locale
             }
           ) }),
           footerRequired ? /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
